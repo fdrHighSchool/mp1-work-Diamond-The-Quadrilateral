@@ -10,20 +10,32 @@ public class UserName {
     String firstName = s.nextLine();
     System.out.print("Enter your last name: ");
     String lastName = s.nextLine();
-
+    System.out.print("Enter your favrite number:");
+    String favNum = s.nextLine();
+    System.out.print("Are You A Student or a Teacher?: ");
+    String whichRole = s.nextLine();
+    
+    
     // test output
-    System.out.println("Hello " + initialize(firstName) + "." + initialize(lastName) + ".");
+    System.out.print("Your Username Is " + (firstName) + firstLetter(lastName) + favNum);
+    if(whichRole.equals("Teacher")){
+        
+        System.out.println("@nycstudents.net");
+    } else{
+      System.out.println("@nycstudents.net");
+    }k
+    
 
     s.close();
-  } // end main method
+  }// end main method
 
   /*
-   * Name: initialize
+   * Name: firstLetter
    * Purpose: send back the first character (inital) of a name
    * Input: a name (String)
    * Return: a single character (String)
    */
-  public static String initialize(String n) {
+  public static String firstLetter(String n) {
     return n.substring(0, 1);
   } // end initialize method
 
