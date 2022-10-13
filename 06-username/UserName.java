@@ -20,10 +20,10 @@ public class UserName {
     System.out.print("Your Username Is " + (firstName) + firstLetter(lastName) + favNum);
     if(whichRole.equals("Teacher")){
         
-        System.out.println("@nycstudents.net");
+        System.out.println("@schools.nyc.gov");
     } else{
       System.out.println("@nycstudents.net");
-    }k
+    }
     
 
     s.close();
