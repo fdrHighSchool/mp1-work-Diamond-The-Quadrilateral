@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.Random;
 public class UserName {
   public static void main(String[] args) {
     // create Scanner object
@@ -13,18 +13,36 @@ public class UserName {
     System.out.print("Enter your favrite number:");
     String favNum = s.nextLine();
     System.out.print("Are You A Student or a Teacher?: ");
-    String whichRole = s.nextLine();
+    String whichRole = s.nextLine().toLowerCase();
     
     
-    if(whichRole.equals("Teacher")){
+    if(whichRole.equals("teacher")){
         System.out.print("Your Username Is " + firstLetter(firstName) + (lastName) + favNum+"@schools.nyc.gov");
-    } else{
+        genPassword();
+    } else if (whichRole.equals("student")){
       System.out.println("Your Username Is " + (firstName) + firstLetter(lastName) + favNum+"@nycstudents.net");
+       genPassword();
+    }else{
+        System.out.println("I Don't Quite Understand "+ whichRole);
     }
     
-
     s.close();
-  }// end main method
+}// end main MO
+public static void genPassword(){
+       Random rand = new Random();
+        String randomPassword = ("");
+      for(int i = 0; i<10; i++){
+     String characterBank = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+ 
+      
+     int grabOne = rand.nextInt(36);
+       String randomLetter = characterBank.substring(grabOne, grabOne+1);
+     randomPassword = (randomPassword + randomLetter);
+    
+    }
+  System.out.println("Randomly Genned Password" + randomPassword);
+   
+  }// end genPass
 
   /*
    * Name: firstLetter
