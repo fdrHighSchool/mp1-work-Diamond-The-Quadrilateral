@@ -40,7 +40,7 @@ public static void genPassword(){
      randomPassword = (randomPassword + randomLetter);
     
     }
-  System.out.println("Randomly Genned Password" + randomPassword);
+  System.out.println("Randomly Genned Password: " + randomPassword);
    
   }// end genPass
 
