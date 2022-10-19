@@ -48,7 +48,7 @@ public static String genPassword(int length){
       //MO1
      
       //ASCI MO
-      int whichList = (int)(Math.random()*4);
+      int whichList = (int)(Math.random()*3);
       System.out.println(whichList);
       if (whichList ==0){ //Capital Letters
       min = 65;
@@ -56,7 +56,7 @@ public static String genPassword(int length){
     }else if(whichList==1){ //Lowercase Letters
        min = 97;
        max = 122;
-    }else{
+    }else{//Symbols
         min =33;
         max = 47;
     }
@@ -69,7 +69,6 @@ public static String genPassword(int length){
       //ASCI MO
   System.out.println("Randomly Genned Password: " + randomPassword);
    return randomPassword;
-
   }// end genPass
 
   /*
