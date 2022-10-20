@@ -10,7 +10,7 @@ public class UserName {
     String firstName = s.nextLine();
     System.out.print("Enter your last name: ");
     String lastName = s.nextLine();
-    System.out.print("Enter your favrite number:");
+    System.out.print("Enter your favorite number:");
     String favNum = s.nextLine();
     System.out.print("Are You A Student or a Teacher?: ");
     String whichRole = s.nextLine().toLowerCase();
@@ -19,25 +19,26 @@ public class UserName {
         System.out.println("Your Username Is " + firstLetter(firstName) + (lastName) + favNum+"@schools.nyc.gov");
         System.out.println("How Long Would You Like Your Randomly Generated password to be?");
         int length = s.nextInt();
-        genPassword(length);
+         System.out.println("Here's Your Randomly Generated Password: " + genPassword(length));
     } else if (whichRole.equals("student")){
       System.out.println("Your Username Is " + (firstName) + firstLetter(lastName) + favNum+"@nycstudents.net");
       System.out.println("How Long Would You Like Your Randomly Generated password to be?");
       int length = s.nextInt();
-       genPassword(length);
+       System.out.println("Here's Your Randomly Generated Password: " + genPassword(length));
     }else{
         System.out.println("I Don't Quite Understand "+ whichRole);
     }
     
     s.close();
 }// end main MO
+
 public static String genPassword(int length){
-        
+         
         //Placeholder
         String randomPassword = ("");
         int max = 0;
         int min = 0;
- for(int i = length; i>0; i--){
+        for(int i = length; i>0; i--){
       //MO 1
       
       //String characterBank = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
@@ -49,25 +50,24 @@ public static String genPassword(int length){
      
       //ASCI MO
       int whichList = (int)(Math.random()*3);
-      System.out.println(whichList);
       if (whichList ==0){ //Capital Letters
       min = 65;
       max = 90;
-    }else if(whichList==1){ //Lowercase Letters
+       }else if(whichList==1){ //Lowercase Letters
        min = 97;
        max = 122;
-    }else{//Symbols
+       }else{//Symbols
         min =33;
         max = 47;
-    }
+       }//Extra Random End
     
-    int rand = (int)(Math.random()*(max-min)+min); 
+       int rand = (int)(Math.random()*(max-min)+min); 
        char addPass = (char)rand;
-       randomPassword = (randomPassword + addPass);
+       randomPassword +=addPass;
        
-}
+   }// loop end
       //ASCI MO
-  System.out.println("Randomly Genned Password: " + randomPassword);
+   System.out.println("Randomly Genned Password: " + randomPassword);
    return randomPassword;
   }// end genPass
 
@@ -81,5 +81,4 @@ public static String genPassword(int length){
     return n.substring(0, 1);
     
   } // end initialize method
-
 } // end class
