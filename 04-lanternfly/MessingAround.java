@@ -25,7 +25,7 @@ public class MessingAround
            System.out.println("Access Denied :(");
        }
        System.out.println("");
-       System.out.println("Would You Line To Play The Local Custom Command Line Hidden Treasure?");
+       System.out.println("Would You Line To Play The Local Custom Command Line Hidden Treasure Localized Entirely In Code?");
        String CommandLine = input.nextLine();
        if(CommandLine.equals("Yes")){
            System.out.println("Good!");
@@ -34,9 +34,13 @@ public class MessingAround
        System.out.println("Too Bad, This Is All I Know How To Make :')");
        }
        comline();
+       String whereTo = input.nextLine(); 
 }
 public static void comline(){
-     System.out.println("Too Bad, Work In Progress Or Something ");
-     System.out.println("Desk       Laptop Cart       ");
+     System.out.println("Work In Progress Or Something ");
+     System.out.println("Desk       Laptop Cart         Friday Letter Box ");
+ }
+ public static void Desk(){
+     
  }
 }
